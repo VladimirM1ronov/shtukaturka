@@ -4,11 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Ровнель: штукатурка стен в Москве и области</title>
-<meta name="description" content="Машинная и ручная штукатурка, шпатлёвка под покраску и откосы. Работа от 590 ₽ за м², под ключ с материалом от 1 090 ₽ за м².">
+<meta name="description" content="Машинная и ручная штукатурка, шпаклёвка под покраску и откосы. Работа от 650 ₽ за м², под ключ с материалом от 1 150 ₽ за м². Скидка за объём до 20%.">
 <meta property="og:title" content="Ровнель: штукатурка стен в Москве и области">
-<meta property="og:description" content="Машинная и ручная штукатурка стен, шпатлёвка и откосы. Работа от 590 ₽ за м².">
+<meta property="og:description" content="Машинная и ручная штукатурка стен, шпаклёвка и откосы. Работа от 650 ₽ за м².">
 <meta property="og:type" content="website">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
+<script>document.documentElement.classList.add('js');</script>
 <meta name="theme-color" content="#1b2a2f">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,7 +35,7 @@ h1, h2, h3, p { margin: 0; }
 :focus-visible { outline: 2px solid var(--mint); outline-offset: 3px; }
 
 /* ---------- buttons ---------- */
-.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; height: 52px; padding: 0 28px; border-radius: 999px; font: 500 15px/1 inherit; font-family: inherit; text-decoration: none; cursor: pointer; border: 1px solid transparent; transition: transform .25s var(--ease), background-color .25s, color .25s, border-color .25s, box-shadow .25s; white-space: nowrap; }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; height: 52px; padding: 0 28px; border-radius: 999px; font-family: inherit; font-size: 15px; font-weight: 500; line-height: 1; text-decoration: none; cursor: pointer; border: 1px solid transparent; transition: transform .25s var(--ease), background-color .25s, color .25s, border-color .25s, box-shadow .25s; white-space: nowrap; }
 .btn:hover { transform: translateY(-2px); }
 .btn:active { transform: translateY(0) scale(.98); }
 .btn--mint { background: var(--mint); color: var(--mint-ink); }
@@ -148,15 +149,27 @@ h1, h2, h3, p { margin: 0; }
 .chip:active { transform: scale(.96); }
 .range__row { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 14px; }
 .range__row label { font-size: 14px; color: var(--muted); }
-.range__row output { font-size: 28px; font-weight: 500; letter-spacing: -.02em; }
+.area-field { display: inline-flex; align-items: baseline; gap: 6px; font-size: 28px; font-weight: 500; letter-spacing: -.02em; }
+.area-field input { width: 3.6em; padding: 0 2px; border: 0; border-bottom: 1.5px dashed var(--line); background: transparent; font: inherit; letter-spacing: inherit; color: var(--ink); text-align: right; font-variant-numeric: tabular-nums; -moz-appearance: textfield; appearance: textfield; transition: border-color .25s; }
+.area-field input:hover, .area-field input:focus { border-bottom-color: var(--mint); outline: none; }
+.area-field input::-webkit-outer-spin-button, .area-field input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
 input[type="range"] { -webkit-appearance: none; appearance: none; width: 100%; height: 4px; border-radius: 4px; background: linear-gradient(var(--mint), var(--mint)) 0/var(--p, 30%) 100% no-repeat, var(--line); cursor: pointer; }
 input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; width: 22px; height: 22px; border-radius: 50%; background: #fff; border: 2px solid var(--dark); box-shadow: 0 2px 8px rgba(0,0,0,.15); transition: transform .2s; }
 input[type="range"]::-webkit-slider-thumb:hover { transform: scale(1.15); }
 input[type="range"]::-moz-range-thumb { width: 18px; height: 18px; border-radius: 50%; background: #fff; border: 2px solid var(--dark); }
-.range__scale { display: flex; justify-content: space-between; margin-top: 10px; font-size: 12px; color: var(--muted); }
+.range__scale { position: relative; height: 18px; margin-top: 10px; font-size: 12px; color: var(--muted); }
+.range__scale span { position: absolute; left: var(--x); transform: translateX(-50%); white-space: nowrap; }
+.range__scale span:first-child { transform: none; }
+.range__scale span:last-child { transform: translateX(-100%); }
+.tiers { display: flex; flex-wrap: wrap; gap: 8px; }
+.tier { display: inline-flex; flex-direction: column; align-items: flex-start; gap: 2px; padding: 8px 14px; border-radius: var(--r-sm); border: 1px solid var(--line); background: #fff; font: inherit; font-size: 12px; color: var(--muted); cursor: pointer; transition: background-color .25s, color .25s, border-color .25s, transform .2s; }
+.tier b { font-size: 15px; font-weight: 500; color: var(--ink); }
+.tier:hover { border-color: var(--ink); }
+.tier:active { transform: scale(.96); }
+.tier[aria-pressed="true"] { background: var(--mint-soft); border-color: var(--mint); color: var(--mint-ink); }
 .calc__result { background: var(--dark); color: #fff; padding: clamp(24px, 3.5vw, 48px); display: flex; flex-direction: column; gap: 22px; }
 .calc__result small { font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: rgba(255,255,255,.55); }
-.calc__sum { font-size: clamp(40px, 4.4vw, 60px); font-weight: 500; letter-spacing: -.035em; line-height: 1; font-variant-numeric: tabular-nums; }
+.calc__sum { font-size: clamp(34px, 3.8vw, 54px); white-space: nowrap; font-weight: 500; letter-spacing: -.035em; line-height: 1; font-variant-numeric: tabular-nums; }
 .calc__cells { display: grid; grid-template-columns: 1fr 1fr; border: 1px solid var(--line-dark); border-radius: var(--r-sm); }
 .calc__cells div { padding: 14px 16px; }
 .calc__cells div:nth-child(odd) { border-right: 1px solid var(--line-dark); }
@@ -349,7 +362,7 @@ input[type="range"]::-moz-range-thumb { width: 18px; height: 18px; border-radius
         </svg>
       </div>
       <h1 id="hero-h" data-enter style="--i:0">Штукатурка стен в Москве и области</h1>
-      <p class="hero__lead" data-enter style="--i:1">Машинная и ручная, по гипсу и цементу. Ставим маяки и выводим стены под покраску или плитку. Работа от 590 ₽ за м².</p>
+      <p class="hero__lead" data-enter style="--i:1">Машинная и ручная, по гипсу и цементу. Ставим маяки и выводим стены под покраску или плитку. Работа от 650 ₽ за м².</p>
       <div class="hero__actions" data-enter style="--i:2">
         <a class="btn btn--ghost" href="#prices">Рассчитать стоимость</a>
         <a class="btn btn--mint" href="#booking">Заказать замер <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 6h9M6.5 2.5 10 6l-3.5 3.5"/></svg></a>
@@ -357,7 +370,7 @@ input[type="range"]::-moz-range-thumb { width: 18px; height: 18px; border-radius
     </div>
     <div class="hero__photo">
       <img src="img/photo-f97605446-1280.jpg" srcset="img/photo-f97605446-960.jpg 960w, img/photo-f97605446-1280.jpg 1280w, img/photo-f97605446.jpg 1920w" sizes="(max-width: 900px) 100vw, 50vw" width="1920" height="1280" alt="Светлая пустая квартира с ровными белыми стенами и деревянной лестницей" fetchpriority="high">
-      <div class="hero__badge" data-enter style="--i:3"><small>Под ключ, с материалом</small><strong>от 1 090 ₽ за м²</strong></div>
+      <div class="hero__badge" data-enter style="--i:3"><small>Под ключ, с материалом</small><strong>от 1 150 ₽ за м²</strong></div>
     </div>
   </section>
 
@@ -369,12 +382,14 @@ input[type="range"]::-moz-range-thumb { width: 18px; height: 18px; border-radius
       <span class="marquee__item"><b>Маяки и уголки</b> входят в цену</span>
       <span class="marquee__item"><b>Приёмка</b> двухметровой рейкой</span>
       <span class="marquee__item"><b>Москва и область</b> выезд на замер</span>
+      <span class="marquee__item"><b>Скидка за объём</b> до 20% на работу</span>
       <span class="marquee__item" aria-hidden="true"><b>Машинная штукатурка</b> гипс до 20 мм</span>
       <span class="marquee__item" aria-hidden="true"><b>Ручная</b> для одной комнаты</span>
       <span class="marquee__item" aria-hidden="true"><b>Цементная</b> ванная и санузел</span>
       <span class="marquee__item" aria-hidden="true"><b>Маяки и уголки</b> входят в цену</span>
       <span class="marquee__item" aria-hidden="true"><b>Приёмка</b> двухметровой рейкой</span>
       <span class="marquee__item" aria-hidden="true"><b>Москва и область</b> выезд на замер</span>
+      <span class="marquee__item" aria-hidden="true"><b>Скидка за объём</b> до 20% на работу</span>
     </div>
   </div>
 
@@ -383,13 +398,13 @@ input[type="range"]::-moz-range-thumb { width: 18px; height: 18px; border-radius
       <div class="head">
         <p class="label" data-reveal="up"><b>01</b>Услуги</p>
         <div>
-          <h2 id="services-h" data-reveal="mask">Штукатурка и шпатлёвка. Четыре вида работ.</h2>
-          <p data-reveal="up" style="--i:1">Цены за м² работы, материал ваш. Площадь считаем по стенам, без окон и дверей.</p>
+          <h2 id="services-h" data-reveal="mask">Штукатурка и шпаклёвка. Четыре вида работ.</h2>
+          <p data-reveal="up" style="--i:1">Цены за м² работы, материал ваш. Площадь считаем по стенам, без окон и дверей. Чем больше объём, тем ниже цена. Дополнительные работы оплачиваются отдельно.</p>
         </div>
       </div>
       <div class="cards">
         <article class="card" data-reveal="up" style="--i:0">
-          <div class="card__top"><span class="card__icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="12" height="9" rx="1.5"/><path d="M15 8h3a2 2 0 0 1 2 2v1"/><path d="M8 13v4M6 20h4l-1-3H7z"/></svg></span><span class="card__price">от 590 ₽/м²</span></div>
+          <div class="card__top"><span class="card__icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="12" height="9" rx="1.5"/><path d="M15 8h3a2 2 0 0 1 2 2v1"/><path d="M8 13v4M6 20h4l-1-3H7z"/></svg></span><span class="card__price">от 650 ₽/м²</span></div>
           <h3>Машинная</h3>
           <p>Гипсовая смесь слоем до 20 мм. Для квартир и домов от 60 м² стен.</p>
           <a class="more" href="#booking">Заказать замер <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M3 9l6-6M4 3h5v5"/></svg></a>
@@ -408,12 +423,13 @@ input[type="range"]::-moz-range-thumb { width: 18px; height: 18px; border-radius
         </article>
         <article class="card" data-reveal="up" style="--i:3">
           <div class="card__top"><span class="card__icon"><svg viewBox="0 0 24 24"><path d="M5 5h10v4H5z"/><path d="M15 7h3v5h-7v3"/><path d="M10 15h2v6h-2z"/></svg></span><span class="card__price">от 480 ₽/м²</span></div>
-          <h3>Шпатлёвка</h3>
+          <h3>Шпаклёвка</h3>
           <p>Два слоя под покраску или обои, шлифовка и грунт.</p>
           <a class="more" href="#booking">Заказать замер <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M3 9l6-6M4 3h5v5"/></svg></a>
         </article>
       </div>
       <div class="extra" data-reveal="up"><b>Откосы окон и дверей</b><span>Штукатурка с перфоуголком на ребре — от 640 ₽ за погонный метр</span></div>
+      <div class="extra" data-reveal="up"><b>Дополнительные работы оплачиваются отдельно</b><span>Демонтаж старой отделки, армирование сеткой, слой толще 20 мм — считаем в смете до начала работ</span></div>
     </div>
   </section>
 
@@ -423,7 +439,7 @@ input[type="range"]::-moz-range-thumb { width: 18px; height: 18px; border-radius
         <p class="label" data-reveal="up"><b>02</b>Расчёт</p>
         <div>
           <h2 id="prices-h" data-reveal="mask">Посчитайте стоимость за минуту</h2>
-          <p data-reveal="up" style="--i:1">Не знаете площадь стен — умножьте площадь пола на 2,8. Точную сумму назовём после замера.</p>
+          <p data-reveal="up" style="--i:1">Не знаете площадь стен — умножьте площадь пола на 2,8. Чем больше объём, тем дешевле метр: скидка на работу до 20%. Точную сумму назовём после замера.</p>
         </div>
       </div>
       <div class="calc" data-reveal="zoom">
@@ -431,10 +447,10 @@ input[type="range"]::-moz-range-thumb { width: 18px; height: 18px; border-radius
           <div class="calc__group">
             <p id="kind-l">Вид работ</p>
             <div class="chips" role="group" aria-labelledby="kind-l" data-chips="kind">
-              <button class="chip" type="button" aria-pressed="true" data-work="590" data-mat="500">Машинная</button>
+              <button class="chip" type="button" aria-pressed="true" data-work="650" data-mat="500">Машинная</button>
               <button class="chip" type="button" aria-pressed="false" data-work="690" data-mat="500">Ручная</button>
               <button class="chip" type="button" aria-pressed="false" data-work="740" data-mat="510">Цементная</button>
-              <button class="chip" type="button" aria-pressed="false" data-work="480" data-mat="170">Шпатлёвка</button>
+              <button class="chip" type="button" aria-pressed="false" data-work="480" data-mat="170">Шпаклёвка</button>
             </div>
           </div>
           <div class="calc__group">
@@ -445,21 +461,31 @@ input[type="range"]::-moz-range-thumb { width: 18px; height: 18px; border-radius
             </div>
           </div>
           <div class="calc__group">
-            <div class="range__row"><label for="area">Площадь стен</label><output id="area-out" for="area">120 м²</output></div>
-            <input id="area" type="range" min="20" max="600" step="5" value="120">
-            <div class="range__scale"><span>20 м²</span><span>300 м²</span><span>600 м²</span></div>
+            <div class="range__row"><label for="area-num">Площадь стен</label><span class="area-field"><input id="area-num" type="number" inputmode="numeric" min="20" max="10000" step="1" value="120"><span aria-hidden="true">м²</span></span></div>
+            <input id="area" type="range" min="0" max="1000" step="1" value="288" aria-label="Площадь стен" aria-valuetext="120 м²">
+            <div class="range__scale" aria-hidden="true"><span style="--x:0%">20</span><span style="--x:25.9%">100</span><span style="--x:62.9%">1 000</span><span style="--x:100%">10 000 м²</span></div>
+          </div>
+          <div class="calc__group">
+            <p id="tier-l">Скидка на работу за объём</p>
+            <div class="tiers" role="group" aria-labelledby="tier-l" data-tiers>
+              <button class="tier" type="button" data-from="20" data-off="0" aria-pressed="false">до 100 м²<b>базовая</b></button>
+              <button class="tier" type="button" data-from="100" data-off="5" aria-pressed="true">от 100 м²<b>−5%</b></button>
+              <button class="tier" type="button" data-from="300" data-off="10" aria-pressed="false">от 300 м²<b>−10%</b></button>
+              <button class="tier" type="button" data-from="1000" data-off="15" aria-pressed="false">от 1 000 м²<b>−15%</b></button>
+              <button class="tier" type="button" data-from="3000" data-off="20" aria-pressed="false">от 3 000 м²<b>−20%</b></button>
+            </div>
           </div>
         </div>
         <div class="calc__result" aria-live="polite">
           <small>Предварительно</small>
-          <p class="calc__sum" data-sum>70 800 ₽</p>
+          <p class="calc__sum" data-sum>74 160 ₽</p>
           <div class="calc__cells">
-            <div><span>Работа</span><b data-work-sum>70 800 ₽</b></div>
+            <div><span>Работа</span><b data-work-sum>74 160 ₽</b></div>
             <div><span>Материал</span><b data-mat-sum>0 ₽</b></div>
-            <div><span>Цена за м²</span><b data-rate>590 ₽</b></div>
-            <div><span>В цене</span><b>маяки, уголки</b></div>
+            <div><span>Цена за м²</span><b data-rate>618 ₽</b></div>
+            <div><span>Скидка за объём</span><b data-discount>−5%</b></div>
           </div>
-          <p class="calc__note">На месте видно, где стены завалены и какой нужен слой, поэтому окончательную цену фиксируем в договоре после замера.</p>
+          <p class="calc__note">Маяки и уголки входят в цену, дополнительные работы оплачиваются отдельно. На месте видно, где стены завалены и какой нужен слой, поэтому окончательную цену фиксируем в договоре после замера.</p>
           <a class="btn btn--mint" href="#booking">Заказать замер <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 6h9M6.5 2.5 10 6l-3.5 3.5"/></svg></a>
         </div>
       </div>
@@ -472,7 +498,7 @@ input[type="range"]::-moz-range-thumb { width: 18px; height: 18px; border-radius
         <p class="label" data-reveal="up"><b>03</b>На объекте</p>
         <div>
           <h2 id="works-h" data-reveal="mask">Как выглядит работа и результат</h2>
-          <p data-reveal="up" style="--i:1">Затираем по маякам, проверяем рейкой и сдаём стены, готовые под шпатлёвку или плитку.</p>
+          <p data-reveal="up" style="--i:1">Затираем по маякам, проверяем рейкой и сдаём стены, готовые под шпаклёвку или плитку.</p>
         </div>
       </div>
       <div class="works">
@@ -506,7 +532,7 @@ input[type="range"]::-moz-range-thumb { width: 18px; height: 18px; border-radius
       <div class="steps">
         <div class="step" data-reveal="up" style="--i:0"><span class="step__num">01</span><span class="step__pill">звонок</span><h3>Заявка</h3><p>Оставляете телефон, перезваниваем и договариваемся о дне замера.</p></div>
         <div class="step" data-reveal="up" style="--i:1"><span class="step__num">02</span><span class="step__pill">выезд</span><h3>Замер</h3><p>Проверяем стены лазерным уровнем, считаем площадь и толщину слоя.</p></div>
-        <div class="step" data-reveal="up" style="--i:2"><span class="step__num">03</span><span class="step__pill">документ</span><h3>Смета и договор</h3><p>Записываем цену за м², сроки и толщину слоя.</p></div>
+        <div class="step" data-reveal="up" style="--i:2"><span class="step__num">03</span><span class="step__pill">документ</span><h3>Смета и договор</h3><p>Записываем цену за м², сроки, толщину слоя и дополнительные работы, если они нужны.</p></div>
         <div class="step" data-reveal="up" style="--i:3"><span class="step__num">04</span><span class="step__pill">маяки</span><h3>Подготовка</h3><p>Укрываем пол и окна, грунтуем, ставим маяки и перфоуголки.</p></div>
         <div class="step" data-reveal="up" style="--i:4"><span class="step__num">05</span><span class="step__pill">смесь</span><h3>Штукатурка</h3><p>Наносим смесь, вытягиваем правилом по маякам и затираем.</p></div>
         <div class="step" data-reveal="up" style="--i:5"><span class="step__num">06</span><span class="step__pill">рейка 2 м</span><h3>Приёмка</h3><p>Проверяем стены рейкой при вас и вывозим мусор в мешках.</p></div>
@@ -514,7 +540,7 @@ input[type="range"]::-moz-range-thumb { width: 18px; height: 18px; border-radius
       <div class="facts" data-reveal="up">
         <div class="facts__lead"><i><svg viewBox="0 0 24 24"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></i><div><b>Цена фиксируется в договоре</b><span>и не меняется до конца работ</span></div></div>
         <div class="fact"><b><span data-count="0">0</span> ₽</b><span>выезд на замер</span></div>
-        <div class="fact"><b>от <span data-count="590">590</span> ₽</b><span>за м² работы</span></div>
+        <div class="fact"><b>от <span data-count="650">650</span> ₽</b><span>за м² работы</span></div>
         <div class="fact"><b><span data-count="2">2</span> м</b><span>рейка при приёмке</span></div>
       </div>
     </div>
@@ -533,10 +559,12 @@ input[type="range"]::-moz-range-thumb { width: 18px; height: 18px; border-radius
       <div>
         <div class="faq">
           <details data-reveal="up" style="--i:0"><summary>Сколько сохнет гипсовая штукатурка? <i aria-hidden="true"></i></summary><div class="faq__body"><p>Около недели при слое 10 мм, +20 °C и проветривании. Цементная сохнет до четырёх недель.</p></div></details>
-          <details data-reveal="up" style="--i:1"><summary>Чей материал? <i aria-hidden="true"></i></summary><div class="faq__body"><p>Как вам удобнее. Работаем из вашего или привозим свой — тогда считаем по цене под ключ.</p></div></details>
+          <details data-reveal="up" style="--i:1"><summary>Чей материал? <i aria-hidden="true"></i></summary><div class="faq__body"><p>Как вам удобнее: работаем с вашим материалом или привозим свой — тогда считаем по цене под ключ.</p></div></details>
           <details data-reveal="up" style="--i:2"><summary>Как считаете площадь? <i aria-hidden="true"></i></summary><div class="faq__body"><p>По стенам, за вычетом окон и дверей. Откосы считаем отдельно, в погонных метрах.</p></div></details>
-          <details data-reveal="up" style="--i:3"><summary>Какой слой можно нанести? <i aria-hidden="true"></i></summary><div class="faq__body"><p>Гипсом обычно до 50 мм в два прохода. Где нужно толще, сначала крепим сетку.</p></div></details>
-          <details data-reveal="up" style="--i:4"><summary>Где вы работаете? <i aria-hidden="true"></i></summary><div class="faq__body"><p>В Москве и Московской области: новостройки, вторичное жильё и частные дома.</p></div></details>
+          <details data-reveal="up" style="--i:3"><summary>Какой слой можно нанести? <i aria-hidden="true"></i></summary><div class="faq__body"><p>Гипсом — до 50 мм в два прохода, а где нужно толще, сначала крепим сетку. Цены на сайте — за слой до 20 мм; более толстый слой и сетку считаем как дополнительные работы.</p></div></details>
+          <details data-reveal="up" style="--i:4"><summary>Что входит в цену, а что оплачивается отдельно? <i aria-hidden="true"></i></summary><div class="faq__body"><p>В цену входят грунтовка, маяки, перфоуголки, затирка и вынос мусора в мешках. Дополнительные работы — демонтаж старой отделки, армирование сеткой, слой толще 20 мм — оплачиваются отдельно. Их стоимость записываем в смету до начала работ.</p></div></details>
+          <details data-reveal="up" style="--i:5"><summary>Есть ли скидка за объём? <i aria-hidden="true"></i></summary><div class="faq__body"><p>Да, чем больше площадь, тем дешевле работа: от 100 м² — 5%, от 300 м² — 10%, от 1 000 м² — 15%, от 3 000 м² — 20%. Калькулятор выше учитывает скидку автоматически.</p></div></details>
+          <details data-reveal="up" style="--i:6"><summary>Где вы работаете? <i aria-hidden="true"></i></summary><div class="faq__body"><p>В Москве и Московской области: новостройки, вторичное жильё и частные дома.</p></div></details>
         </div>
       </div>
       </div>
@@ -558,7 +586,7 @@ input[type="range"]::-moz-range-thumb { width: 18px; height: 18px; border-radius
         </div>
         <form class="form" action="mailto:zamer@rovnel.example" method="post" enctype="text/plain" novalidate data-form>
           <div class="field"><label for="f-name">Имя</label><input id="f-name" name="name" autocomplete="name" required aria-describedby="e-name"><span class="field__error" id="e-name" hidden>Напишите, как к вам обращаться.</span></div>
-          <div class="field"><label for="f-phone">Телефон</label><input id="f-phone" name="phone" type="tel" autocomplete="tel" required aria-describedby="e-phone"><span class="field__error" id="e-phone" hidden>Напишите номер, по которому перезвонить.</span></div>
+          <div class="field"><label for="f-phone">Телефон</label><input id="f-phone" name="phone" type="tel" autocomplete="tel" required aria-describedby="e-phone"><span class="field__error" id="e-phone" hidden>Напишите номер полностью, например +7 900 123-45-67.</span></div>
           <div class="field"><label for="f-place">Город или район</label><input id="f-place" name="place" autocomplete="address-level2"></div>
           <div class="field"><label for="f-area">Площадь стен, м²</label><input id="f-area" name="area" inputmode="numeric"></div>
           <div class="field field--full"><label for="f-note">Что нужно сделать</label><textarea id="f-note" name="note"></textarea></div>
@@ -576,7 +604,7 @@ input[type="range"]::-moz-range-thumb { width: 18px; height: 18px; border-radius
     <div class="footer__top">
       <div>
         <a class="logo" href="#main"><span class="logo__tile"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2.5" width="20" height="5.5" rx="2.75" fill="#1b2a2f"/><rect x="2" y="9.25" width="14" height="5.5" rx="2.75" fill="#1b2a2f"/><rect x="2" y="16" width="8" height="5.5" rx="2.75" fill="#1b2a2f"/></svg></span>Ровнель</a>
-        <p class="footer__lede">Штукатурка и шпатлёвка стен в Москве и Московской области.</p>
+        <p class="footer__lede">Штукатурка и шпаклёвка стен в Москве и Московской области.</p>
       </div>
       <div><h3>Работы</h3><ul><li><a href="#services">Услуги</a></li><li><a href="#works">На объекте</a></li><li><a href="#steps">Этапы</a></li></ul></div>
       <div><h3>Стоимость</h3><ul><li><a href="#prices">Расчёт</a></li><li><a href="#faq">Вопросы</a></li></ul></div>
@@ -637,8 +665,18 @@ input[type="range"]::-moz-range-thumb { width: 18px; height: 18px; border-radius
 
   /* calculator */
   var fmt = function (n) { return Math.round(n).toLocaleString('ru-RU').replace(/\s/g, ' ') + ' ₽'; };
-  var area = document.getElementById('area'), out = document.getElementById('area-out');
-  var sumEl = document.querySelector('[data-sum]'), shown = 70800, run = 0, done = 0;
+  var area = document.getElementById('area'), num = document.getElementById('area-num');
+  var sumEl = document.querySelector('[data-sum]'), shown = 74160, run = 0, done = 0;
+  /* the slider runs on a log scale so 20 m² and 10 000 m² are both easy to reach; the field takes an exact figure */
+  var MIN = 20, MAX = 10000, LN = Math.log(MAX / MIN), areaVal = 120;
+  var tierBtns = document.querySelectorAll('[data-tiers] .tier');
+  var clamp = function (v) { return Math.min(MAX, Math.max(MIN, v)); };
+  var toPos = function (a) { return Math.round(Math.log(a / MIN) / LN * 1000); };
+  var toArea = function (p) {
+    var a = MIN * Math.exp(p / 1000 * LN), s = a < 100 ? 5 : a < 1000 ? 10 : a < 5000 ? 50 : 100;
+    return clamp(Math.round(a / s) * s);
+  };
+  var tierFor = function (a) { var t = tierBtns[0]; tierBtns.forEach(function (b) { if (a >= +b.dataset.from) t = b; }); return t; };
   /* the figure rolls to its new value; each change cancels the last roll, and a timer lands the final value even if frames are paused */
   var animateSum = function (to) {
     var id = ++run; clearTimeout(done);
@@ -654,15 +692,28 @@ input[type="range"]::-moz-range-thumb { width: 18px; height: 18px; border-radius
     requestAnimationFrame(step);
   };
   var calc = function () {
-    var a = +area.value, k = document.querySelector('[data-chips="kind"] [aria-pressed="true"]'), own = document.querySelector('[data-chips="mat"] [aria-pressed="true"]').dataset.own === '1';
-    var work = +k.dataset.work, mat = own ? 0 : +k.dataset.mat;
-    out.textContent = a + ' м²';
-    area.style.setProperty('--p', ((a - area.min) / (area.max - area.min) * 100) + '%');
+    var a = areaVal, k = document.querySelector('[data-chips="kind"] [aria-pressed="true"]'), own = document.querySelector('[data-chips="mat"] [aria-pressed="true"]').dataset.own === '1';
+    var tier = tierFor(a), off = +tier.dataset.off;
+    var work = Math.round(+k.dataset.work * (1 - off / 100)), mat = own ? 0 : +k.dataset.mat;
+    area.style.setProperty('--p', (area.value / 10) + '%');
+    area.setAttribute('aria-valuetext', a.toLocaleString('ru-RU') + ' м²');
+    tierBtns.forEach(function (b) { b.setAttribute('aria-pressed', b === tier ? 'true' : 'false'); });
     document.querySelector('[data-work-sum]').textContent = fmt(a * work);
     document.querySelector('[data-mat-sum]').textContent = fmt(a * mat);
     document.querySelector('[data-rate]').textContent = fmt(work + mat);
+    document.querySelector("[data-discount]").textContent = off ? '−' + off + '%' : 'нет';
     animateSum(a * (work + mat));
   };
+  var setArea = function (v, fromSlider) {
+    areaVal = clamp(Math.round(v));
+    if (!fromSlider) area.value = toPos(areaVal);
+    if (document.activeElement !== num || fromSlider) num.value = areaVal;
+    calc();
+  };
+  area.addEventListener('input', function () { setArea(toArea(+area.value), true); });
+  num.addEventListener('input', function () { var v = parseInt(num.value, 10); if (v >= MIN && v <= MAX) setArea(v); });
+  num.addEventListener('change', function () { var v = parseInt(num.value, 10); setArea(isNaN(v) ? areaVal : v); num.value = areaVal; });
+  tierBtns.forEach(function (b) { b.addEventListener('click', function () { setArea(+b.dataset.from); num.value = areaVal; }); });
   document.querySelectorAll('[data-chips]').forEach(function (g) {
     g.addEventListener('click', function (e) {
       var b = e.target.closest('.chip'); if (!b) return;
@@ -670,7 +721,7 @@ input[type="range"]::-moz-range-thumb { width: 18px; height: 18px; border-radius
       calc();
     });
   });
-  area.addEventListener('input', calc); calc();
+  calc();
 
   /* faq: smooth open and close */
   document.querySelectorAll('.faq details').forEach(function (d) {
@@ -694,10 +745,12 @@ input[type="range"]::-moz-range-thumb { width: 18px; height: 18px; border-radius
   form.addEventListener('submit', function (e) {
     var bad = [];
     [['f-name', 'e-name'], ['f-phone', 'e-phone']].forEach(function (p) {
-      var i = document.getElementById(p[0]), er = document.getElementById(p[1]), ok = i.value.trim().length > 1;
+      var i = document.getElementById(p[0]), er = document.getElementById(p[1]), v = i.value.trim();
+      /* a phone needs at least 10 digits; a name at least two letters */
+      var ok = p[0] === 'f-phone' ? v.replace(/\D/g, '').length >= 10 : v.length > 1;
       i.setAttribute('aria-invalid', ok ? 'false' : 'true'); er.hidden = ok; if (!ok) bad.push(i);
     });
-    if (bad.length) { e.preventDefault(); bad[0].focus(); status.textContent = 'Проверьте поля: ' + bad.length; }
+    if (bad.length) { e.preventDefault(); bad[0].focus(); status.textContent = 'Заполните отмеченные поля.'; }
     else status.textContent = '';
   });
 })();
