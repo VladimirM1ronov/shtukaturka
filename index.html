@@ -1,0 +1,706 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ровнель: штукатурка стен в Москве и области</title>
+<meta name="description" content="Машинная и ручная штукатурка, шпатлёвка под покраску и откосы. Работа от 590 ₽ за м², под ключ с материалом от 1 090 ₽ за м².">
+<meta property="og:title" content="Ровнель: штукатурка стен в Москве и области">
+<meta property="og:description" content="Машинная и ручная штукатурка стен, шпатлёвка и откосы. Работа от 590 ₽ за м².">
+<meta property="og:type" content="website">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#1b2a2f">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #ffffff; --alt: #f1f3f2; --dark: #1b2a2f; --dark-2: #23363c;
+  --ink: #111614; --muted: #5d6764; --line: #dfe3e1; --line-dark: rgba(255,255,255,.12);
+  --mint: #34d1a1; --mint-ink: #0b2b22; --mint-soft: rgba(52,209,161,.14);
+  --r: 14px; --r-sm: 10px; --wrap: 1280px; --gut: clamp(16px, 5.5vw, 80px);
+  --ease: cubic-bezier(.22,.8,.26,1);
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 88px; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 400 16px/1.6 "Onest", system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+img { display: block; max-width: 100%; }
+a { color: inherit; }
+h1, h2, h3, p { margin: 0; }
+.wrap { width: min(100% - 2 * var(--gut), var(--wrap)); margin-inline: auto; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.skip { position: absolute; left: 16px; top: -60px; z-index: 50; background: var(--ink); color: #fff; padding: 10px 16px; border-radius: 8px; }
+.skip:focus { top: 12px; }
+:focus-visible { outline: 2px solid var(--mint); outline-offset: 3px; }
+
+/* ---------- buttons ---------- */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; height: 52px; padding: 0 28px; border-radius: 999px; font: 500 15px/1 inherit; font-family: inherit; text-decoration: none; cursor: pointer; border: 1px solid transparent; transition: transform .25s var(--ease), background-color .25s, color .25s, border-color .25s, box-shadow .25s; white-space: nowrap; }
+.btn:hover { transform: translateY(-2px); }
+.btn:active { transform: translateY(0) scale(.98); }
+.btn--mint { background: var(--mint); color: var(--mint-ink); }
+.btn--mint:hover { box-shadow: 0 10px 30px -10px rgba(52,209,161,.7); }
+.btn--ghost { border-color: rgba(255,255,255,.45); color: #fff; background: transparent; }
+.btn--ghost:hover { background: #fff; color: var(--dark); }
+.btn--dark { background: var(--dark); color: #fff; }
+.btn--sm { height: 42px; padding: 0 20px; font-size: 14px; }
+.btn svg { width: 14px; height: 14px; transition: transform .25s var(--ease); }
+.btn:hover svg { transform: translateX(3px); }
+.more { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 500; letter-spacing: .06em; text-transform: uppercase; text-decoration: none; }
+.more svg { width: 12px; height: 12px; transition: transform .25s var(--ease); }
+.more:hover svg { transform: translate(3px, -3px); }
+
+/* ---------- top bar + nav ---------- */
+.topbar { background: var(--mint); color: var(--mint-ink); font-size: 13px; text-align: center; padding: 9px 16px; }
+.topbar span { display: inline-flex; align-items: center; gap: 8px; }
+.nav { position: sticky; top: 0; z-index: 40; background: rgba(255,255,255,.92); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); transition: box-shadow .3s; }
+.nav.is-scrolled { box-shadow: 0 8px 30px -18px rgba(17,22,20,.35); }
+.nav__bar { display: flex; align-items: center; gap: 40px; height: 72px; }
+.logo { display: inline-flex; align-items: center; gap: 10px; font-weight: 600; font-size: 20px; letter-spacing: -.02em; text-decoration: none; }
+.logo__tile { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 9px; background: var(--dark); }
+.logo__tile svg { width: 18px; height: 18px; }
+.nav__links { display: flex; gap: 30px; margin-right: auto; }
+.nav__links a { position: relative; font-size: 15px; text-decoration: none; padding: 6px 0; }
+.nav__links a::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 1.5px; background: var(--ink); transform: scaleX(0); transform-origin: left; transition: transform .3s var(--ease); }
+.nav__links a:hover::after { transform: scaleX(1); }
+.nav__toggle { display: none; width: 44px; height: 44px; border: 1px solid var(--line); border-radius: 10px; background: #fff; cursor: pointer; }
+.nav__toggle span { display: block; width: 18px; height: 1.6px; margin: 4px auto; background: var(--ink); transition: transform .3s; }
+
+/* ---------- hero ---------- */
+.hero { display: grid; grid-template-columns: 1fr 1fr; min-height: calc(100svh - 72px - 36px); max-height: 900px; }
+.hero__panel { position: relative; overflow: hidden; background: var(--dark); color: #fff; display: flex; flex-direction: column; justify-content: flex-end; padding: 48px clamp(24px, 5.5vw, 80px) 64px; }
+.hero__scene { position: absolute; inset: 0 0 auto 0; height: 56%; }
+.hero__scene svg { width: 100%; height: 100%; }
+.hero h1 { position: relative; font-weight: 500; font-size: clamp(40px, 4.6vw, 68px); line-height: 1.04; letter-spacing: -.035em; max-width: 12ch; }
+.hero__lead { position: relative; margin-top: 20px; max-width: 46ch; color: rgba(255,255,255,.75); font-size: 17px; }
+.hero__actions { position: relative; display: flex; flex-wrap: wrap; gap: 14px; margin-top: 32px; }
+.hero__photo { position: relative; overflow: hidden; background: var(--alt); }
+.hero__photo img { width: 100%; height: 100%; object-fit: cover; object-position: 62% 50%; transform: scale(1.08); transition: transform 1.8s var(--ease); }
+.is-loaded .hero__photo img { transform: scale(1); }
+.hero__badge { position: absolute; left: 32px; bottom: 32px; background: #fff; border-radius: var(--r); padding: 16px 20px; box-shadow: 0 20px 50px -25px rgba(0,0,0,.45); min-width: 250px; }
+.hero__badge small { display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--muted); letter-spacing: .04em; text-transform: uppercase; }
+.hero__badge small::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--mint); animation: pulse 2.2s infinite; }
+.hero__badge strong { display: block; margin-top: 6px; font-size: 22px; font-weight: 500; letter-spacing: -.02em; }
+@keyframes pulse { 0%,100% { box-shadow: 0 0 0 0 rgba(52,209,161,.55); } 60% { box-shadow: 0 0 0 8px rgba(52,209,161,0); } }
+
+/* hero scene: a wall with beacons, a laser line sweeping it */
+.scene-grid line { stroke: rgba(52,209,161,.22); stroke-width: 1; }
+.scene-beacon { stroke: rgba(52,209,161,.7); stroke-width: 2; stroke-dasharray: 360; stroke-dashoffset: 360; animation: draw 1.6s var(--ease) forwards; }
+.scene-beacon:nth-of-type(2) { animation-delay: .25s; } .scene-beacon:nth-of-type(3) { animation-delay: .5s; } .scene-beacon:nth-of-type(4) { animation-delay: .75s; }
+.scene-laser { stroke: var(--mint); stroke-width: 1.5; filter: drop-shadow(0 0 6px var(--mint)); animation: sweep 5.5s ease-in-out infinite; }
+.scene-dot { fill: #ffc66b; filter: drop-shadow(0 0 8px #ffb547); animation: blink 3s ease-in-out infinite; }
+.scene-dot:nth-of-type(2n) { animation-delay: 1s; } .scene-dot:nth-of-type(3n) { animation-delay: 2s; }
+.scene-fill { fill: rgba(52,209,161,.07); animation: fillUp 5.5s ease-in-out infinite; transform-origin: 0 100%; transform-box: fill-box; }
+@keyframes draw { to { stroke-dashoffset: 0; } }
+@keyframes sweep { 0%,100% { transform: translateY(0); } 50% { transform: translateY(210px); } }
+@keyframes fillUp { 0%,100% { transform: scaleY(.15); } 50% { transform: scaleY(1); } }
+@keyframes blink { 0%,100% { opacity: .35; } 50% { opacity: 1; } }
+
+/* ---------- marquee ---------- */
+.marquee { border-block: 1px solid var(--line); overflow: hidden; background: #fff; }
+.marquee__track { display: flex; width: max-content; animation: marquee 38s linear infinite; }
+.marquee:hover .marquee__track { animation-play-state: paused; }
+.marquee__item { display: inline-flex; align-items: center; gap: 14px; padding: 18px 28px; font-size: 14px; color: var(--muted); white-space: nowrap; }
+.marquee__item b { color: var(--ink); font-weight: 500; }
+.marquee__item::after { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--mint); margin-left: 28px; }
+@keyframes marquee { to { transform: translateX(-50%); } }
+
+/* ---------- sections ---------- */
+.section { padding: clamp(72px, 9vw, 128px) 0; }
+.section--alt { background: var(--alt); }
+.section--dark { background: var(--dark); color: #fff; }
+.head { display: grid; grid-template-columns: 3fr 9fr; gap: 24px; padding-top: 28px; border-top: 1px solid var(--line); margin-bottom: clamp(40px, 5vw, 64px); }
+.section--dark .head { border-color: var(--line-dark); }
+.label { font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); padding-top: 8px; }
+.section--dark .label { color: rgba(255,255,255,.55); }
+.label b { font-weight: 500; color: var(--ink); margin-right: 12px; }
+.section--dark .label b { color: var(--mint); }
+.head h2 { font-weight: 500; font-size: clamp(32px, 3.6vw, 52px); line-height: 1.08; letter-spacing: -.03em; max-width: 17ch; }
+.head p { margin-top: 18px; max-width: 52ch; color: var(--muted); font-size: 17px; }
+.section--dark .head p { color: rgba(255,255,255,.7); }
+
+/* services: bordered card grid */
+.cards { display: grid; grid-template-columns: repeat(4, 1fr); border: 1px solid var(--line); border-radius: var(--r); overflow: hidden; background: #fff; }
+.card { position: relative; display: flex; flex-direction: column; gap: 14px; min-height: 340px; padding: 28px; border-right: 1px solid var(--line); transition: background-color .35s; }
+.card:last-child { border-right: 0; }
+.card::before { content: ""; position: absolute; left: 0; top: 0; height: 3px; width: 100%; background: var(--mint); transform: scaleX(0); transform-origin: left; transition: transform .45s var(--ease); }
+.card:hover { background: #fbfcfb; }
+.card:hover::before { transform: scaleX(1); }
+.card__top { display: flex; justify-content: space-between; align-items: flex-start; }
+.card__icon { width: 44px; height: 44px; border-radius: 12px; display: grid; place-items: center; background: var(--mint-soft); transition: transform .4s var(--ease); }
+.card:hover .card__icon { transform: rotate(-8deg) scale(1.06); }
+.card__icon svg { width: 22px; height: 22px; stroke: var(--dark); fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.card__price { font-size: 13px; color: var(--muted); padding: 5px 10px; border: 1px solid var(--line); border-radius: 999px; }
+.card h3 { margin-top: auto; font-weight: 500; font-size: 22px; letter-spacing: -.02em; }
+.card p { color: var(--muted); font-size: 15px; }
+.card .more { margin-top: 10px; }
+.extra { display: flex; justify-content: space-between; align-items: center; gap: 24px; margin-top: 16px; padding: 22px 28px; border: 1px solid var(--line); border-radius: var(--r); background: #fff; }
+.extra b { font-weight: 500; }
+.extra span { color: var(--muted); }
+
+/* calculator */
+.calc { display: grid; grid-template-columns: 7fr 5fr; border: 1px solid var(--line); border-radius: var(--r); overflow: hidden; background: #fff; }
+.calc__form { padding: clamp(24px, 3.5vw, 48px); display: grid; gap: 32px; }
+.calc__group > p { font-size: 14px; color: var(--muted); margin-bottom: 12px; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { height: 40px; padding: 0 18px; border-radius: 999px; border: 1px solid var(--line); background: #fff; font: inherit; font-size: 14px; cursor: pointer; transition: background-color .25s, color .25s, border-color .25s, transform .2s; }
+.chip:hover { border-color: var(--ink); }
+.chip[aria-pressed="true"] { background: var(--dark); color: #fff; border-color: var(--dark); }
+.chip:active { transform: scale(.96); }
+.range__row { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 14px; }
+.range__row label { font-size: 14px; color: var(--muted); }
+.range__row output { font-size: 28px; font-weight: 500; letter-spacing: -.02em; }
+input[type="range"] { -webkit-appearance: none; appearance: none; width: 100%; height: 4px; border-radius: 4px; background: linear-gradient(var(--mint), var(--mint)) 0/var(--p, 30%) 100% no-repeat, var(--line); cursor: pointer; }
+input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; width: 22px; height: 22px; border-radius: 50%; background: #fff; border: 2px solid var(--dark); box-shadow: 0 2px 8px rgba(0,0,0,.15); transition: transform .2s; }
+input[type="range"]::-webkit-slider-thumb:hover { transform: scale(1.15); }
+input[type="range"]::-moz-range-thumb { width: 18px; height: 18px; border-radius: 50%; background: #fff; border: 2px solid var(--dark); }
+.range__scale { display: flex; justify-content: space-between; margin-top: 10px; font-size: 12px; color: var(--muted); }
+.calc__result { background: var(--dark); color: #fff; padding: clamp(24px, 3.5vw, 48px); display: flex; flex-direction: column; gap: 22px; }
+.calc__result small { font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: rgba(255,255,255,.55); }
+.calc__sum { font-size: clamp(40px, 4.4vw, 60px); font-weight: 500; letter-spacing: -.035em; line-height: 1; font-variant-numeric: tabular-nums; }
+.calc__cells { display: grid; grid-template-columns: 1fr 1fr; border: 1px solid var(--line-dark); border-radius: var(--r-sm); }
+.calc__cells div { padding: 14px 16px; }
+.calc__cells div:nth-child(odd) { border-right: 1px solid var(--line-dark); }
+.calc__cells div:nth-child(-n+2) { border-bottom: 1px solid var(--line-dark); }
+.calc__cells span { display: block; font-size: 12px; color: rgba(255,255,255,.55); }
+.calc__cells b { font-weight: 500; font-size: 18px; font-variant-numeric: tabular-nums; }
+.calc__note { font-size: 14px; color: rgba(255,255,255,.6); margin-top: auto; }
+.calc__result .btn { width: 100%; }
+
+/* work photos */
+.works { display: grid; grid-template-columns: 7fr 5fr; gap: 16px; }
+.works__side { display: grid; gap: 16px; }
+.photo { position: relative; overflow: hidden; border-radius: var(--r); background: var(--alt); }
+.photo img { width: 100%; height: 100%; object-fit: cover; transition: transform 1s var(--ease); }
+.photo:hover img { transform: scale(1.04); }
+.photo__tag { position: absolute; left: 16px; top: 16px; background: #fff; border-radius: 999px; padding: 6px 12px; font-size: 12px; font-weight: 500; }
+.works .photo--big { min-height: 560px; }
+.works__side .photo { min-height: 272px; }
+
+/* steps: dark grid with mint numerals */
+.steps { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line-dark); border-left: 1px solid var(--line-dark); }
+.step { position: relative; padding: 32px 28px 36px; border-right: 1px solid var(--line-dark); border-bottom: 1px solid var(--line-dark); transition: background-color .35s; }
+.step:hover { background: var(--dark-2); }
+.step__num { font-size: clamp(48px, 5vw, 68px); line-height: 1; font-weight: 400; letter-spacing: -.04em; color: var(--mint); }
+.step__pill { position: absolute; top: 32px; right: 28px; font-size: 12px; padding: 4px 10px; border-radius: 999px; border: 1px solid var(--line-dark); color: rgba(255,255,255,.7); }
+.step h3 { margin-top: 36px; font-weight: 500; font-size: 20px; }
+.step p { margin-top: 10px; color: rgba(255,255,255,.65); font-size: 15px; max-width: 34ch; }
+.facts { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; align-items: center; gap: 24px; margin-top: 40px; padding: 28px 32px; border: 1px solid var(--line-dark); border-radius: var(--r); }
+.facts__lead { display: flex; align-items: center; gap: 18px; }
+.facts__lead i { flex: none; width: 52px; height: 52px; border-radius: 50%; border: 1px solid var(--mint); display: grid; place-items: center; }
+.facts__lead i svg { width: 22px; height: 22px; stroke: var(--mint); fill: none; stroke-width: 1.6; }
+.facts__lead b { display: block; font-weight: 500; font-size: 20px; }
+.facts__lead span { color: rgba(255,255,255,.6); font-size: 14px; }
+.fact b { display: block; font-size: 34px; font-weight: 500; letter-spacing: -.03em; font-variant-numeric: tabular-nums; }
+.fact > span { font-size: 13px; color: rgba(255,255,255,.6); }
+
+/* faq accordion */
+.faq { border-top: 1px solid var(--line); }
+.faq details { border-bottom: 1px solid var(--line); }
+.faq summary { display: flex; justify-content: space-between; align-items: center; gap: 24px; padding: 26px 0; cursor: pointer; list-style: none; font-size: 20px; font-weight: 500; letter-spacing: -.01em; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary i { flex: none; position: relative; width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--line); transition: background-color .3s, transform .4s var(--ease); }
+.faq summary i::before, .faq summary i::after { content: ""; position: absolute; left: 50%; top: 50%; width: 12px; height: 1.6px; background: var(--ink); transform: translate(-50%, -50%); transition: transform .4s var(--ease), background-color .3s; }
+.faq summary i::after { transform: translate(-50%, -50%) rotate(90deg); }
+.faq details[open] summary i { background: var(--dark); transform: rotate(180deg); }
+.faq details[open] summary i::before, .faq details[open] summary i::after { background: #fff; }
+.faq details[open] summary i::after { transform: translate(-50%, -50%) rotate(0deg); }
+.faq__body { overflow: hidden; transition: height .45s var(--ease); }
+.faq__body p { padding-bottom: 26px; max-width: 70ch; color: var(--muted); }
+.faq-layout { display: grid; grid-template-columns: 3fr 9fr; gap: 24px; }
+
+/* booking */
+.book { display: grid; grid-template-columns: 1fr 1fr; border-radius: var(--r); overflow: hidden; background: var(--dark); color: #fff; }
+.book__text { padding: clamp(28px, 4vw, 56px); display: flex; flex-direction: column; gap: 18px; }
+.book__text h2 { font-weight: 500; font-size: clamp(32px, 3.4vw, 48px); line-height: 1.08; letter-spacing: -.03em; }
+.book__text p { color: rgba(255,255,255,.7); max-width: 40ch; }
+.book__list { list-style: none; padding: 0; margin: 12px 0 0; display: grid; gap: 12px; }
+.book__list li { display: flex; gap: 12px; align-items: center; color: rgba(255,255,255,.85); }
+.book__list li::before { content: ""; width: 20px; height: 20px; flex: none; border-radius: 50%; background: var(--mint-soft) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M6 10.5l2.5 2.5L14 7.5' fill='none' stroke='%2334d1a1' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/20px no-repeat; }
+.form { background: #fff; color: var(--ink); margin: 8px; border-radius: calc(var(--r) - 4px); padding: clamp(24px, 3.5vw, 44px); display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-content: start; }
+.field { display: grid; gap: 8px; font-size: 14px; font-weight: 500; }
+.field--full, .form > .btn, .form__note, .form__status { grid-column: 1 / -1; }
+.field input, .field textarea { width: 100%; height: 52px; padding: 0 16px; border-radius: var(--r-sm); border: 1px solid var(--line); background: var(--alt); font: inherit; font-weight: 400; font-size: 16px; color: var(--ink); transition: border-color .25s, background-color .25s, box-shadow .25s; }
+.field textarea { height: 104px; padding: 14px 16px; resize: vertical; }
+.field input:focus, .field textarea:focus { outline: none; border-color: var(--mint); background: #fff; box-shadow: 0 0 0 4px var(--mint-soft); }
+.field input[aria-invalid="true"] { border-color: #d64545; }
+.field__error { font-weight: 400; font-size: 13px; color: #c23b3b; }
+.form > .btn { margin-top: 6px; }
+.form__note { font-size: 13px; color: var(--muted); }
+.form__status { font-size: 14px; min-height: 1em; }
+
+/* footer */
+.footer { background: var(--dark); color: rgba(255,255,255,.75); padding: 64px 0 32px; }
+.footer__top { display: grid; grid-template-columns: 5fr 2fr 2fr 3fr; gap: 24px; padding-bottom: 48px; border-bottom: 1px solid var(--line-dark); }
+.footer .logo { color: #fff; }
+.footer .logo__tile { background: var(--mint); }
+.footer__lede { margin-top: 16px; max-width: 30ch; }
+.footer h3 { font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: rgba(255,255,255,.45); font-weight: 500; margin-bottom: 14px; }
+.footer ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+.footer a { text-decoration: none; transition: color .2s; }
+.footer a:hover { color: var(--mint); }
+.footer__legal { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; padding-top: 24px; font-size: 13px; color: rgba(255,255,255,.45); }
+
+/* ---------- reveal on scroll ---------- */
+.js [data-reveal] { opacity: 0; transition: opacity .9s var(--ease), transform .9s var(--ease); transition-delay: calc(var(--i, 0) * 110ms); will-change: transform, opacity; }
+.js [data-reveal="up"] { transform: translateY(48px); }
+.js [data-reveal="left"] { transform: translateX(-64px); }
+.js [data-reveal="right"] { transform: translateX(64px); }
+.js [data-reveal="zoom"] { transform: scale(.92); }
+.js [data-reveal="mask"] { opacity: 1; clip-path: inset(0 0 100% 0); transform: translateY(24px); transition: clip-path 1.1s var(--ease), transform 1.1s var(--ease); transition-delay: calc(var(--i, 0) * 110ms); }
+.js [data-reveal].is-in { opacity: 1; transform: none; }
+.js [data-reveal="mask"].is-in { clip-path: inset(0 0 0 0); }
+.js .hero [data-enter] { opacity: 0; transform: translateY(28px); transition: opacity .9s var(--ease), transform .9s var(--ease); transition-delay: calc(var(--i, 0) * 120ms + 150ms); }
+.js.is-loaded .hero [data-enter] { opacity: 1; transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .js [data-reveal], .js .hero [data-enter] { opacity: 1 !important; transform: none !important; clip-path: none !important; }
+  .marquee__track { transform: none; }
+  html { scroll-behavior: auto; }
+}
+
+/* ---------- responsive ---------- */
+@media (max-width: 1100px) {
+  .cards { grid-template-columns: repeat(2, 1fr); }
+  .card:nth-child(2) { border-right: 0; }
+  .card:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+  .facts { grid-template-columns: 1fr 1fr 1fr; } .facts__lead { grid-column: 1 / -1; }
+}
+@media (max-width: 900px) {
+  .nav__links, .nav__bar > .btn { display: none; }
+  .nav__toggle { display: block; margin-left: auto; }
+  .nav.is-open .nav__links { display: flex; position: absolute; left: 0; right: 0; top: 72px; flex-direction: column; gap: 0; background: #fff; border-bottom: 1px solid var(--line); padding: 8px var(--gut) 20px; }
+  .nav.is-open .nav__links a { padding: 14px 0; border-bottom: 1px solid var(--line); font-size: 17px; }
+  .nav.is-open .nav__toggle span:first-child { transform: translateY(2.8px) rotate(45deg); }
+  .nav.is-open .nav__toggle span:last-child { transform: translateY(-2.8px) rotate(-45deg); }
+  .hero { grid-template-columns: 1fr; max-height: none; }
+  .hero__panel { min-height: 560px; }
+  .hero__photo { height: 420px; }
+  .head, .faq-layout { grid-template-columns: 1fr; gap: 12px; }
+  .faq-layout > div:empty { display: none; }
+  .calc, .works, .book { grid-template-columns: 1fr; }
+  .works .photo--big { min-height: 380px; }
+  .steps { grid-template-columns: 1fr 1fr; }
+  .footer__top { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 600px) {
+  .topbar { font-size: 12px; }
+  .hero__panel { min-height: 520px; padding-bottom: 40px; }
+  .hero__scene { height: 42%; opacity: .45; }
+  .hero__actions .btn { width: 100%; }
+  .hero__photo { height: 320px; }
+  .hero__badge { left: 16px; right: 16px; bottom: 16px; min-width: 0; }
+  .cards { grid-template-columns: 1fr; }
+  .card { border-right: 0; border-bottom: 1px solid var(--line); min-height: 0; }
+  .card:last-child { border-bottom: 0; }
+  .card h3 { margin-top: 24px; }
+  .extra { flex-direction: column; align-items: flex-start; }
+  .steps { grid-template-columns: 1fr; }
+  .facts { grid-template-columns: 1fr; }
+  .form { grid-template-columns: 1fr; }
+  .works__side .photo { min-height: 220px; }
+  .faq summary { font-size: 17px; }
+  .footer__top { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Перейти к содержанию</a>
+
+<div class="topbar"><span>
+  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+  Выезд на замер и смета — бесплатно, Москва и область</span></div>
+
+<header class="nav" id="nav">
+  <div class="wrap nav__bar">
+    <a class="logo" href="#main" aria-label="Ровнель, на главную">
+      <span class="logo__tile"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2.5" width="20" height="5.5" rx="2.75" fill="#34d1a1"/><rect x="2" y="9.25" width="14" height="5.5" rx="2.75" fill="#fff"/><rect x="2" y="16" width="8" height="5.5" rx="2.75" fill="#fff"/></svg></span>
+      Ровнель
+    </a>
+    <nav class="nav__links" id="menu" aria-label="Основное меню">
+      <a href="#services">Услуги</a>
+      <a href="#prices">Цены</a>
+      <a href="#works">Работы</a>
+      <a href="#steps">Этапы</a>
+      <a href="#faq">Вопросы</a>
+    </nav>
+    <a class="btn btn--dark btn--sm" href="#booking">Заказать замер</a>
+    <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Меню"><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" aria-labelledby="hero-h">
+    <div class="hero__panel">
+      <div class="hero__scene" aria-hidden="true">
+        <svg viewBox="0 0 640 420" preserveAspectRatio="xMidYMid slice">
+          <g class="scene-grid">
+            <line x1="120" y1="60" x2="120" y2="360"/><line x1="200" y1="60" x2="200" y2="360"/><line x1="280" y1="60" x2="280" y2="360"/><line x1="360" y1="60" x2="360" y2="360"/><line x1="440" y1="60" x2="440" y2="360"/><line x1="520" y1="60" x2="520" y2="360"/>
+            <line x1="120" y1="60" x2="520" y2="60"/><line x1="120" y1="135" x2="520" y2="135"/><line x1="120" y1="210" x2="520" y2="210"/><line x1="120" y1="285" x2="520" y2="285"/><line x1="120" y1="360" x2="520" y2="360"/>
+            <line x1="520" y1="60" x2="590" y2="20"/><line x1="520" y1="360" x2="590" y2="320"/><line x1="590" y1="20" x2="590" y2="320"/><line x1="120" y1="60" x2="190" y2="20"/><line x1="190" y1="20" x2="590" y2="20"/>
+          </g>
+          <rect class="scene-fill" x="120" y="60" width="400" height="300"/>
+          <line class="scene-beacon" x1="160" y1="60" x2="160" y2="360"/>
+          <line class="scene-beacon" x1="280" y1="60" x2="280" y2="360"/>
+          <line class="scene-beacon" x1="400" y1="60" x2="400" y2="360"/>
+          <line class="scene-beacon" x1="500" y1="60" x2="500" y2="360"/>
+          <line class="scene-laser" x1="90" y1="110" x2="560" y2="110"/>
+          <circle class="scene-dot" cx="160" cy="60" r="4"/><circle class="scene-dot" cx="400" cy="210" r="4"/><circle class="scene-dot" cx="520" cy="135" r="4"/><circle class="scene-dot" cx="280" cy="285" r="4"/><circle class="scene-dot" cx="590" cy="20" r="4"/><circle class="scene-dot" cx="200" cy="360" r="4"/>
+        </svg>
+      </div>
+      <h1 id="hero-h" data-enter style="--i:0">Штукатурка стен в Москве и области</h1>
+      <p class="hero__lead" data-enter style="--i:1">Машинная и ручная, по гипсу и цементу. Ставим маяки и выводим стены под покраску или плитку. Работа от 590 ₽ за м².</p>
+      <div class="hero__actions" data-enter style="--i:2">
+        <a class="btn btn--ghost" href="#prices">Рассчитать стоимость</a>
+        <a class="btn btn--mint" href="#booking">Заказать замер <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 6h9M6.5 2.5 10 6l-3.5 3.5"/></svg></a>
+      </div>
+    </div>
+    <div class="hero__photo">
+      <img src="img/photo-f97605446-1280.jpg" srcset="img/photo-f97605446-960.jpg 960w, img/photo-f97605446-1280.jpg 1280w, img/photo-f97605446.jpg 1920w" sizes="(max-width: 900px) 100vw, 50vw" width="1920" height="1280" alt="Светлая пустая квартира с ровными белыми стенами и деревянной лестницей" fetchpriority="high">
+      <div class="hero__badge" data-enter style="--i:3"><small>Под ключ, с материалом</small><strong>от 1 090 ₽ за м²</strong></div>
+    </div>
+  </section>
+
+  <div class="marquee" aria-label="Коротко о работе">
+    <div class="marquee__track">
+      <span class="marquee__item"><b>Машинная штукатурка</b> гипс до 20 мм</span>
+      <span class="marquee__item"><b>Ручная</b> для одной комнаты</span>
+      <span class="marquee__item"><b>Цементная</b> ванная и санузел</span>
+      <span class="marquee__item"><b>Маяки и уголки</b> входят в цену</span>
+      <span class="marquee__item"><b>Приёмка</b> двухметровой рейкой</span>
+      <span class="marquee__item"><b>Москва и область</b> выезд на замер</span>
+      <span class="marquee__item" aria-hidden="true"><b>Машинная штукатурка</b> гипс до 20 мм</span>
+      <span class="marquee__item" aria-hidden="true"><b>Ручная</b> для одной комнаты</span>
+      <span class="marquee__item" aria-hidden="true"><b>Цементная</b> ванная и санузел</span>
+      <span class="marquee__item" aria-hidden="true"><b>Маяки и уголки</b> входят в цену</span>
+      <span class="marquee__item" aria-hidden="true"><b>Приёмка</b> двухметровой рейкой</span>
+      <span class="marquee__item" aria-hidden="true"><b>Москва и область</b> выезд на замер</span>
+    </div>
+  </div>
+
+  <section class="section" id="services" aria-labelledby="services-h">
+    <div class="wrap">
+      <div class="head">
+        <p class="label" data-reveal="up"><b>01</b>Услуги</p>
+        <div>
+          <h2 id="services-h" data-reveal="mask">Штукатурка и шпатлёвка. Четыре вида работ.</h2>
+          <p data-reveal="up" style="--i:1">Цены за м² работы, материал ваш. Площадь считаем по стенам, без окон и дверей.</p>
+        </div>
+      </div>
+      <div class="cards">
+        <article class="card" data-reveal="up" style="--i:0">
+          <div class="card__top"><span class="card__icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="12" height="9" rx="1.5"/><path d="M15 8h3a2 2 0 0 1 2 2v1"/><path d="M8 13v4M6 20h4l-1-3H7z"/></svg></span><span class="card__price">от 590 ₽/м²</span></div>
+          <h3>Машинная</h3>
+          <p>Гипсовая смесь слоем до 20 мм. Для квартир и домов от 60 м² стен.</p>
+          <a class="more" href="#booking">Заказать замер <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M3 9l6-6M4 3h5v5"/></svg></a>
+        </article>
+        <article class="card" data-reveal="up" style="--i:1">
+          <div class="card__top"><span class="card__icon"><svg viewBox="0 0 24 24"><path d="M4 15l9-9 5 5-9 9H4z"/><path d="M13 6l2-2 5 5-2 2"/></svg></span><span class="card__price">от 690 ₽/м²</span></div>
+          <h3>Ручная</h3>
+          <p>Гипс вручную: одна комната, ремонт участков, сложные углы.</p>
+          <a class="more" href="#booking">Заказать замер <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M3 9l6-6M4 3h5v5"/></svg></a>
+        </article>
+        <article class="card" data-reveal="up" style="--i:2">
+          <div class="card__top"><span class="card__icon"><svg viewBox="0 0 24 24"><path d="M12 3c3 4 6 7 6 11a6 6 0 0 1-12 0c0-4 3-7 6-11z"/></svg></span><span class="card__price">от 740 ₽/м²</span></div>
+          <h3>Цементная</h3>
+          <p>Цементно-песчаная смесь для ванной, санузла и холодных помещений.</p>
+          <a class="more" href="#booking">Заказать замер <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M3 9l6-6M4 3h5v5"/></svg></a>
+        </article>
+        <article class="card" data-reveal="up" style="--i:3">
+          <div class="card__top"><span class="card__icon"><svg viewBox="0 0 24 24"><path d="M5 5h10v4H5z"/><path d="M15 7h3v5h-7v3"/><path d="M10 15h2v6h-2z"/></svg></span><span class="card__price">от 480 ₽/м²</span></div>
+          <h3>Шпатлёвка</h3>
+          <p>Два слоя под покраску или обои, шлифовка и грунт.</p>
+          <a class="more" href="#booking">Заказать замер <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M3 9l6-6M4 3h5v5"/></svg></a>
+        </article>
+      </div>
+      <div class="extra" data-reveal="up"><b>Откосы окон и дверей</b><span>Штукатурка с перфоуголком на ребре — от 640 ₽ за погонный метр</span></div>
+    </div>
+  </section>
+
+  <section class="section section--alt" id="prices" aria-labelledby="prices-h">
+    <div class="wrap">
+      <div class="head">
+        <p class="label" data-reveal="up"><b>02</b>Расчёт</p>
+        <div>
+          <h2 id="prices-h" data-reveal="mask">Посчитайте стоимость за минуту</h2>
+          <p data-reveal="up" style="--i:1">Не знаете площадь стен — умножьте площадь пола на 2,8. Точную сумму назовём после замера.</p>
+        </div>
+      </div>
+      <div class="calc" data-reveal="zoom">
+        <div class="calc__form">
+          <div class="calc__group">
+            <p id="kind-l">Вид работ</p>
+            <div class="chips" role="group" aria-labelledby="kind-l" data-chips="kind">
+              <button class="chip" type="button" aria-pressed="true" data-work="590" data-mat="500">Машинная</button>
+              <button class="chip" type="button" aria-pressed="false" data-work="690" data-mat="500">Ручная</button>
+              <button class="chip" type="button" aria-pressed="false" data-work="740" data-mat="510">Цементная</button>
+              <button class="chip" type="button" aria-pressed="false" data-work="480" data-mat="170">Шпатлёвка</button>
+            </div>
+          </div>
+          <div class="calc__group">
+            <p id="mat-l">Материал</p>
+            <div class="chips" role="group" aria-labelledby="mat-l" data-chips="mat">
+              <button class="chip" type="button" aria-pressed="true" data-own="1">Ваш</button>
+              <button class="chip" type="button" aria-pressed="false" data-own="0">Наш, с доставкой</button>
+            </div>
+          </div>
+          <div class="calc__group">
+            <div class="range__row"><label for="area">Площадь стен</label><output id="area-out" for="area">120 м²</output></div>
+            <input id="area" type="range" min="20" max="600" step="5" value="120">
+            <div class="range__scale"><span>20 м²</span><span>300 м²</span><span>600 м²</span></div>
+          </div>
+        </div>
+        <div class="calc__result" aria-live="polite">
+          <small>Предварительно</small>
+          <p class="calc__sum" data-sum>70 800 ₽</p>
+          <div class="calc__cells">
+            <div><span>Работа</span><b data-work-sum>70 800 ₽</b></div>
+            <div><span>Материал</span><b data-mat-sum>0 ₽</b></div>
+            <div><span>Цена за м²</span><b data-rate>590 ₽</b></div>
+            <div><span>В цене</span><b>маяки, уголки</b></div>
+          </div>
+          <p class="calc__note">На месте видно, где стены завалены и какой нужен слой, поэтому окончательную цену фиксируем в договоре после замера.</p>
+          <a class="btn btn--mint" href="#booking">Заказать замер <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 6h9M6.5 2.5 10 6l-3.5 3.5"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="works" aria-labelledby="works-h">
+    <div class="wrap">
+      <div class="head">
+        <p class="label" data-reveal="up"><b>03</b>На объекте</p>
+        <div>
+          <h2 id="works-h" data-reveal="mask">Как выглядит работа и результат</h2>
+          <p data-reveal="up" style="--i:1">Затираем по маякам, проверяем рейкой и сдаём стены, готовые под шпатлёвку или плитку.</p>
+        </div>
+      </div>
+      <div class="works">
+        <figure class="photo photo--big" data-reveal="left" style="margin:0">
+          <img src="img/photo-f116250131.jpg" srcset="img/photo-f116250131-960.jpg 960w, img/photo-f116250131.jpg 1280w" sizes="(max-width: 900px) 100vw, 58vw" width="1280" height="962" alt="Пустая комната с гладкими светлыми стенами, солнце из двух окон" loading="lazy">
+          <span class="photo__tag">Результат</span>
+        </figure>
+        <div class="works__side">
+          <figure class="photo" data-reveal="right" style="margin:0;--i:1">
+            <img src="img/photo-f6035208-crop.jpg" width="600" height="750" alt="Рука штукатура с гладилкой и сокол со смесью у стены" loading="lazy" style="object-position:40% 35%">
+            <span class="photo__tag">Затирка</span>
+          </figure>
+          <figure class="photo" data-reveal="right" style="margin:0;--i:2">
+            <img src="img/photo-f3508608-960.jpg" width="960" height="722" alt="Шпатели разной ширины на рабочем столе" loading="lazy">
+            <span class="photo__tag">Инструмент</span>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--dark" id="steps" aria-labelledby="steps-h">
+    <div class="wrap">
+      <div class="head">
+        <p class="label" data-reveal="up"><b>04</b>Этапы</p>
+        <div>
+          <h2 id="steps-h" data-reveal="mask">От заявки до ровных стен — шесть шагов</h2>
+          <p data-reveal="up" style="--i:1">Каждый шаг заканчивается понятным результатом: смета, договор, принятые стены.</p>
+        </div>
+      </div>
+      <div class="steps">
+        <div class="step" data-reveal="up" style="--i:0"><span class="step__num">01</span><span class="step__pill">звонок</span><h3>Заявка</h3><p>Оставляете телефон, перезваниваем и договариваемся о дне замера.</p></div>
+        <div class="step" data-reveal="up" style="--i:1"><span class="step__num">02</span><span class="step__pill">выезд</span><h3>Замер</h3><p>Проверяем стены лазерным уровнем, считаем площадь и толщину слоя.</p></div>
+        <div class="step" data-reveal="up" style="--i:2"><span class="step__num">03</span><span class="step__pill">документ</span><h3>Смета и договор</h3><p>Записываем цену за м², сроки и толщину слоя.</p></div>
+        <div class="step" data-reveal="up" style="--i:3"><span class="step__num">04</span><span class="step__pill">маяки</span><h3>Подготовка</h3><p>Укрываем пол и окна, грунтуем, ставим маяки и перфоуголки.</p></div>
+        <div class="step" data-reveal="up" style="--i:4"><span class="step__num">05</span><span class="step__pill">смесь</span><h3>Штукатурка</h3><p>Наносим смесь, вытягиваем правилом по маякам и затираем.</p></div>
+        <div class="step" data-reveal="up" style="--i:5"><span class="step__num">06</span><span class="step__pill">рейка 2 м</span><h3>Приёмка</h3><p>Проверяем стены рейкой при вас и вывозим мусор в мешках.</p></div>
+      </div>
+      <div class="facts" data-reveal="up">
+        <div class="facts__lead"><i><svg viewBox="0 0 24 24"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></i><div><b>Цена фиксируется в договоре</b><span>и не меняется до конца работ</span></div></div>
+        <div class="fact"><b><span data-count="0">0</span> ₽</b><span>выезд на замер</span></div>
+        <div class="fact"><b>от <span data-count="590">590</span> ₽</b><span>за м² работы</span></div>
+        <div class="fact"><b><span data-count="2">2</span> м</b><span>рейка при приёмке</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="faq" aria-labelledby="faq-h">
+    <div class="wrap">
+      <div class="head">
+        <p class="label" data-reveal="up"><b>05</b>Вопросы</p>
+        <div>
+          <h2 id="faq-h" data-reveal="mask">Что спрашивают перед замером</h2>
+        </div>
+      </div>
+      <div class="faq-layout">
+      <div></div>
+      <div>
+        <div class="faq">
+          <details data-reveal="up" style="--i:0"><summary>Сколько сохнет гипсовая штукатурка? <i aria-hidden="true"></i></summary><div class="faq__body"><p>Около недели при слое 10 мм, +20 °C и проветривании. Цементная сохнет до четырёх недель.</p></div></details>
+          <details data-reveal="up" style="--i:1"><summary>Чей материал? <i aria-hidden="true"></i></summary><div class="faq__body"><p>Как вам удобнее. Работаем из вашего или привозим свой — тогда считаем по цене под ключ.</p></div></details>
+          <details data-reveal="up" style="--i:2"><summary>Как считаете площадь? <i aria-hidden="true"></i></summary><div class="faq__body"><p>По стенам, за вычетом окон и дверей. Откосы считаем отдельно, в погонных метрах.</p></div></details>
+          <details data-reveal="up" style="--i:3"><summary>Какой слой можно нанести? <i aria-hidden="true"></i></summary><div class="faq__body"><p>Гипсом обычно до 50 мм в два прохода. Где нужно толще, сначала крепим сетку.</p></div></details>
+          <details data-reveal="up" style="--i:4"><summary>Где вы работаете? <i aria-hidden="true"></i></summary><div class="faq__body"><p>В Москве и Московской области: новостройки, вторичное жильё и частные дома.</p></div></details>
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt" id="booking" aria-labelledby="booking-h">
+    <div class="wrap">
+      <div class="book" data-reveal="up">
+        <div class="book__text">
+          <p class="label"><b style="color:var(--mint)">06</b>Заявка</p>
+          <h2 id="booking-h">Замер и смета</h2>
+          <p>Оставьте телефон: перезвоним, выберем день и приедем с лазерным уровнем.</p>
+          <ul class="book__list">
+            <li>Проверим стены и посчитаем площадь</li>
+            <li>Подскажем, машинная или ручная выгоднее</li>
+            <li>Оставим смету с ценой за м²</li>
+          </ul>
+        </div>
+        <form class="form" action="mailto:zamer@rovnel.example" method="post" enctype="text/plain" novalidate data-form>
+          <div class="field"><label for="f-name">Имя</label><input id="f-name" name="name" autocomplete="name" required aria-describedby="e-name"><span class="field__error" id="e-name" hidden>Напишите, как к вам обращаться.</span></div>
+          <div class="field"><label for="f-phone">Телефон</label><input id="f-phone" name="phone" type="tel" autocomplete="tel" required aria-describedby="e-phone"><span class="field__error" id="e-phone" hidden>Напишите номер, по которому перезвонить.</span></div>
+          <div class="field"><label for="f-place">Город или район</label><input id="f-place" name="place" autocomplete="address-level2"></div>
+          <div class="field"><label for="f-area">Площадь стен, м²</label><input id="f-area" name="area" inputmode="numeric"></div>
+          <div class="field field--full"><label for="f-note">Что нужно сделать</label><textarea id="f-note" name="note"></textarea></div>
+          <button class="btn btn--mint" type="submit">Заказать замер <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 6h9M6.5 2.5 10 6l-3.5 3.5"/></svg></button>
+          <p class="form__status" role="status" data-status></p>
+          <p class="form__note">Нажимая кнопку, вы соглашаетесь на обработку данных из заявки. <a href="privacy.html">Подробнее</a></p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__top">
+      <div>
+        <a class="logo" href="#main"><span class="logo__tile"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2.5" width="20" height="5.5" rx="2.75" fill="#1b2a2f"/><rect x="2" y="9.25" width="14" height="5.5" rx="2.75" fill="#1b2a2f"/><rect x="2" y="16" width="8" height="5.5" rx="2.75" fill="#1b2a2f"/></svg></span>Ровнель</a>
+        <p class="footer__lede">Штукатурка и шпатлёвка стен в Москве и Московской области.</p>
+      </div>
+      <div><h3>Работы</h3><ul><li><a href="#services">Услуги</a></li><li><a href="#works">На объекте</a></li><li><a href="#steps">Этапы</a></li></ul></div>
+      <div><h3>Стоимость</h3><ul><li><a href="#prices">Расчёт</a></li><li><a href="#faq">Вопросы</a></li></ul></div>
+      <div><h3>Связь</h3><ul><li><a href="#booking">Заявка на замер</a></li><li>Москва и область</li></ul></div>
+    </div>
+    <div class="footer__legal"><span>© 2026 Ровнель · <a href="privacy.html">Конфиденциальность</a></span><a href="credits.html">Фотографии: Wikimedia Commons</a></div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var root = document.documentElement;
+  root.classList.add('js');
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  window.addEventListener('load', function () { root.classList.add('is-loaded'); });
+  setTimeout(function () { root.classList.add('is-loaded'); }, 1200);
+
+  /* nav shadow + phone menu */
+  var nav = document.getElementById('nav'), toggle = nav.querySelector('.nav__toggle');
+  var onScroll = function () { nav.classList.toggle('is-scrolled', window.scrollY > 8); };
+  window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
+  toggle.addEventListener('click', function () { var open = nav.classList.toggle('is-open'); toggle.setAttribute('aria-expanded', open); });
+  nav.querySelectorAll('.nav__links a').forEach(function (a) { a.addEventListener('click', function () { nav.classList.remove('is-open'); toggle.setAttribute('aria-expanded', 'false'); }); });
+
+  /* reveal on scroll */
+  var items = document.querySelectorAll('[data-reveal]');
+  if (!('IntersectionObserver' in window) || reduce) { items.forEach(function (el) { el.classList.add('is-in'); }); }
+  else {
+    /* a fully clipped element never counts as visible, so a mask reveal watches its parent instead */
+    var targets = new Map();
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        (targets.get(e.target) || []).forEach(function (el) { el.classList.add('is-in'); });
+        io.unobserve(e.target);
+      });
+    }, { rootMargin: '0px 0px -12% 0px', threshold: 0.12 });
+    items.forEach(function (el) {
+      var t = el.dataset.reveal === 'mask' ? el.parentElement : el;
+      if (!targets.has(t)) { targets.set(t, []); io.observe(t); }
+      targets.get(t).push(el);
+    });
+  }
+
+  /* count-up */
+  var counts = document.querySelectorAll('[data-count]');
+  var runCount = function (el) {
+    var end = +el.dataset.count; if (reduce || end === 0) { el.textContent = end; return; }
+    var t0 = null, dur = 1400;
+    var step = function (t) { t0 = t0 || t; var p = Math.min(1, (t - t0) / dur); el.textContent = Math.round(end * (1 - Math.pow(1 - p, 3))); if (p < 1) requestAnimationFrame(step); };
+    requestAnimationFrame(step);
+    setTimeout(function () { el.textContent = end; }, dur + 200);
+  };
+  if ('IntersectionObserver' in window) {
+    var co = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { runCount(e.target); co.unobserve(e.target); } }); }, { threshold: 0.6 });
+    counts.forEach(function (el) { el.textContent = '0'; co.observe(el); });
+  }
+
+  /* calculator */
+  var fmt = function (n) { return Math.round(n).toLocaleString('ru-RU').replace(/\s/g, ' ') + ' ₽'; };
+  var area = document.getElementById('area'), out = document.getElementById('area-out');
+  var sumEl = document.querySelector('[data-sum]'), shown = 70800, run = 0, done = 0;
+  /* the figure rolls to its new value; each change cancels the last roll, and a timer lands the final value even if frames are paused */
+  var animateSum = function (to) {
+    var id = ++run; clearTimeout(done);
+    done = setTimeout(function () { if (id === run) { sumEl.textContent = fmt(to); shown = to; } }, 520);
+    if (reduce) { sumEl.textContent = fmt(to); shown = to; return; }
+    var from = shown, t0 = null;
+    var step = function (t) {
+      if (id !== run) return;
+      t0 = t0 || t; var p = Math.min(1, (t - t0) / 450), v = from + (to - from) * (1 - Math.pow(1 - p, 3));
+      sumEl.textContent = fmt(v); shown = v;
+      if (p < 1) requestAnimationFrame(step); else shown = to;
+    };
+    requestAnimationFrame(step);
+  };
+  var calc = function () {
+    var a = +area.value, k = document.querySelector('[data-chips="kind"] [aria-pressed="true"]'), own = document.querySelector('[data-chips="mat"] [aria-pressed="true"]').dataset.own === '1';
+    var work = +k.dataset.work, mat = own ? 0 : +k.dataset.mat;
+    out.textContent = a + ' м²';
+    area.style.setProperty('--p', ((a - area.min) / (area.max - area.min) * 100) + '%');
+    document.querySelector('[data-work-sum]').textContent = fmt(a * work);
+    document.querySelector('[data-mat-sum]').textContent = fmt(a * mat);
+    document.querySelector('[data-rate]').textContent = fmt(work + mat);
+    animateSum(a * (work + mat));
+  };
+  document.querySelectorAll('[data-chips]').forEach(function (g) {
+    g.addEventListener('click', function (e) {
+      var b = e.target.closest('.chip'); if (!b) return;
+      g.querySelectorAll('.chip').forEach(function (c) { c.setAttribute('aria-pressed', c === b ? 'true' : 'false'); });
+      calc();
+    });
+  });
+  area.addEventListener('input', calc); calc();
+
+  /* faq: smooth open and close */
+  document.querySelectorAll('.faq details').forEach(function (d) {
+    var s = d.querySelector('summary'), body = d.querySelector('.faq__body');
+    s.addEventListener('click', function (e) {
+      if (reduce) return;
+      e.preventDefault();
+      if (d.open) {
+        body.style.height = body.scrollHeight + 'px'; requestAnimationFrame(function () { body.style.height = '0px'; });
+        body.addEventListener('transitionend', function h() { d.open = false; body.style.height = ''; body.removeEventListener('transitionend', h); });
+      } else {
+        d.open = true; body.style.height = '0px';
+        requestAnimationFrame(function () { body.style.height = body.scrollHeight + 'px'; });
+        body.addEventListener('transitionend', function h() { body.style.height = ''; body.removeEventListener('transitionend', h); });
+      }
+    });
+  });
+
+  /* form: errors under fields; mailto stand-in until the real address is known */
+  var form = document.querySelector('[data-form]'), status = document.querySelector('[data-status]');
+  form.addEventListener('submit', function (e) {
+    var bad = [];
+    [['f-name', 'e-name'], ['f-phone', 'e-phone']].forEach(function (p) {
+      var i = document.getElementById(p[0]), er = document.getElementById(p[1]), ok = i.value.trim().length > 1;
+      i.setAttribute('aria-invalid', ok ? 'false' : 'true'); er.hidden = ok; if (!ok) bad.push(i);
+    });
+    if (bad.length) { e.preventDefault(); bad[0].focus(); status.textContent = 'Проверьте поля: ' + bad.length; }
+    else status.textContent = '';
+  });
+})();
+</script>
+</body>
+</html>
